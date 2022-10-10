@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/UbuntuMono-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.647343 )
+colors = PoolColorArray( 0.384314, 0.345098, 0.243137, 1, 0.694118, 0.690196, 0.411765, 1 )
+
+[sub_resource type="GradientTexture2D" id=3]
+gradient = SubResource( 2 )
+fill_from = Vector2( 0.108333, 0.720833 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.968627, 0.905882, 0.627451, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 1024.0
+margin_bottom = 80.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Ultimate Chess: The Final Variant"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_top = 150.0
+margin_right = 1024.0
+margin_bottom = 250.0
+texture_normal = SubResource( 3 )
+expand = true
+
+[node name="Button" type="Button" parent="."]
+margin_top = 300.0
+margin_right = 1024.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 4 )
+text = "click me for nothing to happen"
